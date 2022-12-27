@@ -1,0 +1,78 @@
+$primary-color: #ed502e;
+$secondary-color: #0372aa;
+$font-color-normal: #4d4646;
+
+html{
+  scroll-behavior: smooth;
+}
+.ng-image-slider .ng-image-slider-container .main .prev {
+  left: 5px !important;
+}
+
+.ng-image-slider .ng-image-slider-container .main .next,
+.ng-image-slider .ng-image-slider-container .main .prev {
+  background-color: #e7e2e285 !important;
+  border-radius: 0 !important;
+  width: 80px !important;
+  height: 50px !important;
+  font-size: 50px !important;
+  line-height: 35px !important;
+  text-decoration: none !important;
+  color: grey !important;
+  right: 3px !important;
+}
+
+.section-title h2 {
+  font-family: "Crimson Text", serif;
+  font-family: "Philosopher", sans-serif;
+  font-weight: 700;
+  color: #ed502e;
+  font-size: 2.5rem;
+  margin: 0 0 15px;
+  border-left: 7px solid #0372aa;
+  padding-left: 15px;
+  text-shadow: 2px -1px 3px rgb(9 9 9 / 59%);
+}
+
+.section-description {
+  font-family: "Crimson Text", serif;
+  font-size: 1.4rem;
+  color: $font-color-normal;
+}
+#company-logo-section .logo-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 250px;
+  width: 100%;
+  margin-bottom: 120px;
+  margin-top: -5px;
+  background-image: linear-gradient(
+    to bottom,
+    #0b90d2,
+    #0081e2,
+    #006eee,
+    #0055f1,
+    #4c2dea
+  );
+}
+.company-logo-image {
+  position: absolute;
+  bottom: -95px;
+  height: 230px;
+  width: 540px;
+  border: 5px solid #2f69f8;
+  border-radius: 10px;
+  -webkit-box-shadow: -1px -6px 11px -1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px -6px 11px -1px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px -6px 11px -1px rgba(0, 0, 0, 0.75);
+}
+
+.company-title {
+  font-family: "Philosopher", sans-serif;
+  color: #fff;
+  text-shadow: -2px 6px 6px rgb(0 0 0 / 59%);
+  font-size: 3.5rem;
+  margin-top: 20px;
+}

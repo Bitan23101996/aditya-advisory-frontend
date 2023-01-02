@@ -1,1 +1,64 @@
-<p>our-services works!</p>
+<section id="services-section" class="animate__animated animate__fadeInUp">
+  <div class="section-title mt-4 mb-4">
+    <h2 class="text-uppercase">Services</h2>
+  </div>
+  <p class="section-description">
+    Select below the insurence you are interested in.
+    <em>(You can select multiple options)</em>
+  </p>
+
+  <div class="multiple-service-catagory-section mt-2 mb-5">
+    <div class="row">
+      <div class="col-12">
+        <ng-container *ngIf="serviceItemList.length > 0">
+          <ng-container *ngFor="let serviceItem of serviceItemList; let i = index">
+            <input
+              class="myClass"
+              [id]="serviceItem.serviceItemId"
+              type="checkbox"
+              (change)="selectService($event, serviceItem, i)"
+              [checked]="serviceItem.isItemChecked"
+            />
+            
+            <label class="mr-2" [for]="serviceItem.serviceItemId">
+              <i class="fa-solid serviceItemIcon" [ngClass]="serviceItem.serviceItemIconClass"></i>
+              {{ serviceItem.serviceItemLabel }}
+            </label>
+          </ng-container>
+        </ng-container>
+      </div>
+    </div>
+
+    <div class="row mt-3">
+      <ng-container *ngIf="insurenceItemList.length > 0">
+        <ng-container *ngFor="let insurenceItem of insurenceItemList">
+          <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
+           
+              <div class="card insurence-card">
+                <div class="card-body posotion-relative">
+                  <span class="badge custom-insurence-badge" *ngIf="insurenceItem.serviceItemLabel != null">{{insurenceItem?.serviceItemLabel}}</span>
+                  
+                  <h3 class="card-heading-text">{{insurenceItem?.insurenceName == null ? 'N/A' : insurenceItem?.insurenceName}}</h3>
+                  <p class="card-desc-text">
+                    {{ insurenceItem.insurenceDesc | slice:0:160 }} {{insurenceItem.insurenceDesc.length > 160 ? '...' : ''}}
+                  </p>
+                    <img [src]="insurenceItem.insurenceImgUrl" class="insurenceImgUrl" alt="Image Content"/>
+                  <div class="row mt-2">
+                    <div class="col-6">
+                      <strong class="priceKey">Price:</strong>
+                      <label class="ml-2 priceValue">{{insurenceItem?.insurencePrice == null ? 'N/A' : insurenceItem?.insurencePrice}}</label>
+                    </div>
+                    <div class="col-6 text-end">
+                      <a href="javascript:void(0);" class="enquiry-text">Enquiry</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            
+          </div>
+        </ng-container>
+      </ng-container>
+    </div>
+  </div>
+</section>

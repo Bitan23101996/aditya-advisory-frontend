@@ -30,7 +30,7 @@ import { CompanyLogoComponent } from './components/company-logo/company-logo.com
   ],
   imports: [
     CommonModule,
-    NgImageSliderModule
+    NgImageSliderModule,
   ],
   exports:[
     FooterComponent,

@@ -16,7 +16,8 @@ export class OurServicesComponent implements OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.getServiceItemList();
+    // this.getServiceItemList();
+    this.getAllInsurenceList();
   }
 
   public getServiceItemList(): ServiceItem[] {
@@ -69,5 +70,10 @@ export class OurServicesComponent implements OnInit {
         }
       }
     }
+  }
+
+  public getAllInsurenceList():InsurenceItem[]{
+    this.insurenceItemList = this.apiService.getAlliInsurenceItemList();
+return this.insurenceItemList;
   }
 }

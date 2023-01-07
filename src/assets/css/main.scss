@@ -200,14 +200,27 @@ input[type="checkbox"].myClass:checked + label {
   letter-spacing: 1px;
 }
 .insurence-card .enquiry-text{
-  font-size: 1.1rem;
-  text-decoration: none;
-  text-transform: uppercase;
-  color: $primary-color;
-  letter-spacing: 1px;
-  font-weight: 500;
+  font-size: 1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 1px;
+    font-weight: 500;
+    position: absolute;
+    bottom: 10px;
+    right: -15px;
+    border: 1px solid $primary-color;
+    padding: 2px 3px;
+    background: $primary-color;
+    border-radius: 5px;
+    -webkit-box-shadow: 2px 7px 12px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 7px 12px -6px rgba(0,0,0,0.75);
+    box-shadow: 2px 7px 12px -6px rgba(0,0,0,0.75);
 }
-
+/* .insurence-card .card-header-section{
+  height: 50px;
+  background-color: red;
+} */
 
 /*
 ----------------------------------------------------

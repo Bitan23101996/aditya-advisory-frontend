@@ -268,4 +268,8 @@ export class ApiService {
   public getQRCodeList() {
     return this.QRCodeList;
   }
+
+  public getAlliInsurenceItemList(){
+    return this.insurenceList;
+  }
 }

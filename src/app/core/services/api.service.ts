@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { InsurenceItem } from '../models/insurence-item.model';
+import { PayableMobileNumber } from '../models/payable-mobile-no.model';
+import { QRCode } from '../models/qr-code.model';
 import { ServiceItem } from '../models/service-item.model';
 
 @Injectable({
@@ -12,76 +14,76 @@ export class ApiService {
       serviceItemId: 1,
       serviceItemLabel: 'Health Insurance & Mediclaim',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-notes-medical'
+      serviceItemIconClass: 'fa-notes-medical',
     },
     {
       serviceItemId: 2,
       serviceItemLabel: 'Life Insurance',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-heart-pulse'
+      serviceItemIconClass: 'fa-heart-pulse',
     },
-    
+
     {
       serviceItemId: 3,
       serviceItemLabel: 'Fire & Burglary Insurance',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-fire'
+      serviceItemIconClass: 'fa-fire',
     },
     {
       serviceItemId: 4,
       serviceItemLabel: 'Home, Shop & Office Insurance',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-house-user'
+      serviceItemIconClass: 'fa-house-user',
     },
     {
       serviceItemId: 5,
       serviceItemLabel: 'Bike, Motor Insurance',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-motorcycle'
+      serviceItemIconClass: 'fa-motorcycle',
     },
     {
       serviceItemId: 6,
       serviceItemLabel: 'Group Insurance',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-group-arrows-rotate'
+      serviceItemIconClass: 'fa-group-arrows-rotate',
     },
     {
       serviceItemId: 7,
       serviceItemLabel: 'Home Loan & LAP',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-building'
+      serviceItemIconClass: 'fa-building',
     },
     {
       serviceItemId: 8,
       serviceItemLabel: 'Retirement & Education Planning',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-book'
+      serviceItemIconClass: 'fa-book',
     },
-    
+
     {
       serviceItemId: 9,
       serviceItemLabel: 'Mutual Fund',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-money-bill-trend-up'
+      serviceItemIconClass: 'fa-money-bill-trend-up',
     },
     {
       serviceItemId: 10,
       serviceItemLabel: 'Income Tax & GST',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-hand-holding-dollar'
+      serviceItemIconClass: 'fa-hand-holding-dollar',
     },
     {
       serviceItemId: 11,
       serviceItemLabel: 'PA, Travel & Liability',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-compass'
+      serviceItemIconClass: 'fa-compass',
     },
     {
       serviceItemId: 12,
       serviceItemLabel: 'Direct Equity & Bond',
       isItemChecked: false,
-      serviceItemIconClass: 'fa-file-contract'
-    }
+      serviceItemIconClass: 'fa-file-contract',
+    },
   ];
   insurenceList: InsurenceItem[] = [
     {
@@ -89,7 +91,8 @@ export class ApiService {
       serviceItemLabel: 'Health Insurance & Mediclaim',
       insurenceId: 1,
       insurenceName: 'This is a health insurence',
-      insurenceDesc: 'Protects you from unexpected, high medical costs by using our health insurence policy',
+      insurenceDesc:
+        'Protects you from unexpected, high medical costs by using our health insurence policy',
       insurenceImgUrl: 'assets/images/mock_images/healthInc.jpg',
       insurencePrice: 1000,
     },
@@ -98,7 +101,8 @@ export class ApiService {
       serviceItemLabel: 'Life Insurance',
       insurenceId: 2,
       insurenceName: 'This is a life insurence',
-      insurenceDesc: 'If a child, a spouse, or a parent depends on you and your income, you need life insurance.',
+      insurenceDesc:
+        'If a child, a spouse, or a parent depends on you and your income, you need life insurance.',
       insurenceImgUrl: 'assets/images/mock_images/Life-Inc.png',
       insurencePrice: 1500,
     },
@@ -116,7 +120,8 @@ export class ApiService {
       serviceItemLabel: 'Home, Shop & Office Insurance',
       insurenceId: 4,
       insurenceName: 'This is Home, Shop & Office Insurance',
-      insurenceDesc: 'Protect your property from unexpected ricks such as fires, burglaries, natural disasters and other unfortunate incidents.',
+      insurenceDesc:
+        'Protect your property from unexpected ricks such as fires, burglaries, natural disasters and other unfortunate incidents.',
       insurenceImgUrl: 'assets/images/mock_images/home-shop-inc.jpg',
       insurencePrice: 2500,
     },
@@ -125,7 +130,8 @@ export class ApiService {
       serviceItemLabel: 'Bike, Motor Insurance',
       insurenceId: 5,
       insurenceName: 'This is a Bike, Motor Insurance',
-      insurenceDesc: 'Ensure your bike or Motor safety with this Insurance policy.',
+      insurenceDesc:
+        'Ensure your bike or Motor safety with this Insurance policy.',
       insurenceImgUrl: 'assets/images/mock_images/bikeInc.png',
       insurencePrice: 3000,
     },
@@ -189,9 +195,56 @@ export class ApiService {
       serviceItemLabel: 'Direct Equity & Bond',
       insurenceId: 12,
       insurenceName: 'This is a Direct Equity & Bond',
-      insurenceDesc: 'Stay calm & be focused on long term investments for wealth creation.',
+      insurenceDesc:
+        'Stay calm & be focused on long term investments for wealth creation.',
       insurenceImgUrl: 'assets/images/mock_images/direct-Equity.jpg',
       insurencePrice: 3000,
+    },
+  ];
+
+  payableMobileNumberList: PayableMobileNumber[] = [
+    {
+      payableMobileNumberId: 1,
+      payableMobileNumberlabel: 'PhonePay Number',
+      payableMobileNumberValue: 12345678,
+    },
+    {
+      payableMobileNumberId: 2,
+      payableMobileNumberlabel: 'Gpay Number',
+      payableMobileNumberValue: 12345678,
+    },
+    {
+      payableMobileNumberId: 3,
+      payableMobileNumberlabel: 'Paytm Number',
+      payableMobileNumberValue: 12345678,
+    },
+    {
+      payableMobileNumberId: 4,
+      payableMobileNumberlabel: 'Amazon Pay',
+      payableMobileNumberValue: 12345678,
+    },
+  ];
+
+  QRCodeList: QRCode[] = [
+    {
+      qrCodeId: 1,
+      qrCodelabel: "PhonePay",
+      qrCodeImgUrl: "assets/images/qr-codes/qr.jpg",
+    },
+    {
+      qrCodeId: 2,
+      qrCodelabel: "Gpay",
+      qrCodeImgUrl: "assets/images/qr-codes/qr.jpg",
+    },
+    {
+      qrCodeId: 3,
+      qrCodelabel: "Paytm",
+      qrCodeImgUrl: "assets/images/qr-codes/qr.jpg",
+    },
+    {
+      qrCodeId: 4,
+      qrCodelabel: "Amazon Pay",
+      qrCodeImgUrl: "assets/images/qr-codes/qr.jpg",
     },
   ];
   constructor() {}
@@ -202,7 +255,17 @@ export class ApiService {
 
   public getInsurenceList(serviceItemId: number) {
     let tempList = [];
-    tempList = this.insurenceList.filter((data) => data.serviceItemId === serviceItemId);
+    tempList = this.insurenceList.filter(
+      (data) => data.serviceItemId === serviceItemId
+    );
     return tempList;
+  }
+
+  public getPayableMobileNumberList() {
+    return this.payableMobileNumberList;
+  }
+
+  public getQRCodeList() {
+    return this.QRCodeList;
   }
 }

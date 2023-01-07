@@ -1,1 +1,28 @@
-<p>payment-gateway works!</p>
+<section id="payment-section" > 
+    <div class="section-title mt-4 mb-4">
+      <h2 class="text-uppercase">Payment</h2>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <div class="row" *ngIf="payableMobileNumberList.length > 0">
+                <ng-container *ngFor="let payableMobileNumber of payableMobileNumberList">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12">
+                        <strong>{{payableMobileNumber?.payableMobileNumberlabel}}</strong>: {{payableMobileNumber?.payableMobileNumberValue}}
+                    </div>
+                </ng-container>                
+            </div>
+        </div>
+        <div class="card-body">
+            <h5 class="text-uppercase">Qr Codes: </h5>
+            <div class="row">
+                <ng-container *ngFor="let qrCode of qrCodeList">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 text-center mt-4">
+                        <strong>{{qrCode?.qrCodelabel}}</strong>
+                        <img [src]="qrCode?.qrCodeImgUrl" alt="QR Code" class="qr-code-img"/>
+                    </div>
+                </ng-container>
+                
+            </div>
+        </div>
+    </div>    
+  </section>

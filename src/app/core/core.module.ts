@@ -26,7 +26,8 @@ import { CompanyLogoComponent } from './components/company-logo/company-logo.com
     GalleryComponent,
     FeedbackComponent,
     EnquiryComponent,
-    CompanyLogoComponent
+    CompanyLogoComponent,
+    PaymentGatewayComponent
   ],
   imports: [
     CommonModule,
@@ -44,7 +45,8 @@ import { CompanyLogoComponent } from './components/company-logo/company-logo.com
     FeedbackComponent,
     EnquiryComponent,
     CompanyLogoComponent,
-    NgImageSliderModule
+    NgImageSliderModule,
+    PaymentGatewayComponent
   ]
 })
 export class CoreModule { }

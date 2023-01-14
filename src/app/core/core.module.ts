@@ -12,6 +12,9 @@ import { FeedbackComponent } from './components/feedback/feedback.component';
 import { EnquiryComponent } from './components/enquiry/enquiry.component';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { CompanyLogoComponent } from './components/company-logo/company-logo.component';
+import { SocialMediaContactComponent } from './components/social-media-contact/social-media-contact.component';
+import { ApplicationFooterComponent } from './components/application-footer/application-footer.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 @NgModule({
@@ -27,10 +30,13 @@ import { CompanyLogoComponent } from './components/company-logo/company-logo.com
     FeedbackComponent,
     EnquiryComponent,
     CompanyLogoComponent,
+    SocialMediaContactComponent,
+    ApplicationFooterComponent,
   ],
   imports: [
     CommonModule,
     NgImageSliderModule,
+    SharedModule
   ],
   exports:[
     FooterComponent,
@@ -44,6 +50,8 @@ import { CompanyLogoComponent } from './components/company-logo/company-logo.com
     FeedbackComponent,
     EnquiryComponent,
     CompanyLogoComponent,
+    SocialMediaContactComponent,
+    ApplicationFooterComponent,
     NgImageSliderModule
   ]
 })

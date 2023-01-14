@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { InsurenceItem } from '../models/insurence-item.model';
+import { Menu } from '../models/menu.model';
 import { PayableMobileNumber } from '../models/payable-mobile-no.model';
 import { QRCode } from '../models/qr-code.model';
 import { ServiceItem } from '../models/service-item.model';
@@ -229,34 +230,35 @@ export class ApiService {
   QRCodeList: QRCode[] = [
     {
       qrCodeId: 1,
-      qrCodelabel: "PhonePay",
-      qrCodeImgUrl: "assets/images/qr-codes/qr.jpg",
+      qrCodelabel: 'PhonePay',
+      qrCodeImgUrl: 'assets/images/qr-codes/qr.jpg',
     },
     {
       qrCodeId: 2,
-      qrCodelabel: "Gpay",
-      qrCodeImgUrl: "assets/images/qr-codes/qr.jpg",
+      qrCodelabel: 'Gpay',
+      qrCodeImgUrl: 'assets/images/qr-codes/qr.jpg',
     },
     {
       qrCodeId: 3,
-      qrCodelabel: "Paytm",
-      qrCodeImgUrl: "assets/images/qr-codes/qr.jpg",
+      qrCodelabel: 'Paytm',
+      qrCodeImgUrl: 'assets/images/qr-codes/qr.jpg',
     },
     {
       qrCodeId: 4,
-      qrCodelabel: "Amazon Pay",
-      qrCodeImgUrl: "assets/images/qr-codes/qr.jpg",
+      qrCodelabel: 'Amazon Pay',
+      qrCodeImgUrl: 'assets/images/qr-codes/qr.jpg',
     },
   ];
 
   //Life Insurence Array
-  lifeIncImageList: TrustedBrandImg[] =[
+  lifeIncImageList: TrustedBrandImg[] = [
     {
       thumbImage: 'assets/images/trusted-brand/LifeInc/LifeInc_HDFC.png',
-      trustedBrandImgId: 1,      
+      trustedBrandImgId: 1,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/LifeInc/LifeInc_ICICI_Prudential.png',
+      thumbImage:
+        'assets/images/trusted-brand/LifeInc/LifeInc_ICICI_Prudential.png',
       trustedBrandImgId: 2,
     },
     {
@@ -270,21 +272,23 @@ export class ApiService {
     {
       thumbImage: 'assets/images/trusted-brand/LifeInc/LifeInc_TATA_AIA.png',
       trustedBrandImgId: 5,
-    }
-  ]
+    },
+  ];
 
   //Health Insurence Array
-  healthIncImageList: TrustedBrandImg[] =[
+  healthIncImageList: TrustedBrandImg[] = [
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_aditya-birla-capital-limited.jpg',
-      trustedBrandImgId: 1,      
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_aditya-birla-capital-limited.jpg',
+      trustedBrandImgId: 1,
     },
     {
       thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_bajaj.png',
       trustedBrandImgId: 2,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_care_health.png',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_care_health.png',
       trustedBrandImgId: 3,
     },
     {
@@ -292,15 +296,18 @@ export class ApiService {
       trustedBrandImgId: 4,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_hdfc-ergo.png',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_hdfc-ergo.png',
       trustedBrandImgId: 5,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_icici_insurance.jpg',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_icici_insurance.jpg',
       trustedBrandImgId: 6,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_kotak-general.jpg',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_kotak-general.jpg',
       trustedBrandImgId: 7,
     },
     {
@@ -308,19 +315,23 @@ export class ApiService {
       trustedBrandImgId: 8,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_tata_aig.png',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_tata_aig.png',
       trustedBrandImgId: 9,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_Universal-Sompo.jpg',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_Universal-Sompo.jpg',
       trustedBrandImgId: 10,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthIncStar_Health.png',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthIncStar_Health.png',
       trustedBrandImgId: 11,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_national.png',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_national.png',
       trustedBrandImgId: 12,
     },
     {
@@ -332,99 +343,152 @@ export class ApiService {
       trustedBrandImgId: 14,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_shriram.jpeg',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_shriram.jpeg',
       trustedBrandImgId: 15,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_magma_hdi.png',
+      thumbImage:
+        'assets/images/trusted-brand/HealthInc/healthInc_magma_hdi.png',
       trustedBrandImgId: 16,
     },
     {
       thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_manipal.png',
       trustedBrandImgId: 17,
-    }
-  ]
-
+    },
+  ];
+  //Mutual Array
   mutualFundImageList: TrustedBrandImg[] = [
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_aditya_birla.png',
-      trustedBrandImgId: 1,      
+      trustedBrandImgId: 1,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_axis.png',
-      trustedBrandImgId: 2,      
+      trustedBrandImgId: 2,
     },
     {
-      thumbImage: 'assets/images/trusted-brand/mFund/mFund_Ben_Head_franklin.jpg',
-      trustedBrandImgId: 3,      
+      thumbImage:
+        'assets/images/trusted-brand/mFund/mFund_Ben_Head_franklin.jpg',
+      trustedBrandImgId: 3,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_birla.jpg',
-      trustedBrandImgId: 4,      
+      trustedBrandImgId: 4,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_dsp.png',
-      trustedBrandImgId: 5,      
+      trustedBrandImgId: 5,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_edleweiss.png',
-      trustedBrandImgId: 6,      
+      trustedBrandImgId: 6,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_hdfc.png',
-      trustedBrandImgId: 7,      
+      trustedBrandImgId: 7,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_icici.png',
-      trustedBrandImgId: 8,      
+      trustedBrandImgId: 8,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_kotak.png',
-      trustedBrandImgId: 9,      
+      trustedBrandImgId: 9,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_landt.png',
-      trustedBrandImgId: 10,      
+      trustedBrandImgId: 10,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_lic.png',
-      trustedBrandImgId: 11,      
+      trustedBrandImgId: 11,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_motilal.png',
-      trustedBrandImgId: 12,      
+      trustedBrandImgId: 12,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_mutualFund.jpg',
-      trustedBrandImgId: 13,      
+      trustedBrandImgId: 13,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_nippon.png',
-      trustedBrandImgId: 14,      
+      trustedBrandImgId: 14,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_pgim.png',
-      trustedBrandImgId: 15,      
+      trustedBrandImgId: 15,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_quant.jpg',
-      trustedBrandImgId: 16,      
+      trustedBrandImgId: 16,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_sbi.png',
-      trustedBrandImgId: 17,      
+      trustedBrandImgId: 17,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_tata.jpg',
-      trustedBrandImgId: 18,      
+      trustedBrandImgId: 18,
     },
     {
       thumbImage: 'assets/images/trusted-brand/mFund/mFund_uti.jpg',
-      trustedBrandImgId: 19,      
-    }
+      trustedBrandImgId: 19,
+    },
+  ];
 
-  ]
-
+  //Menu List Array
+  menuList:Menu[] = [
+    {
+      menuId: 1,
+      menuName: 'Home',
+      menuDesc: 'Home',
+      showMenu: true
+    },
+    {
+      menuId: 2,
+      menuName: 'About',
+      menuDesc: 'About',
+      showMenu: true
+    },
+    {
+      menuId: 3,
+      menuName: 'Services',
+      menuDesc: 'Services',
+      showMenu: true
+    },
+    {
+      menuId: 4,
+      menuName: 'Trusted Brand',
+      menuDesc: 'Trusted Brand',
+      showMenu: true
+    },
+    {
+      menuId: 5,
+      menuName: 'Payment',
+      menuDesc: 'Payment',
+      showMenu: true
+    },
+    {
+      menuId: 6,
+      menuName: 'Gallery',
+      menuDesc: 'Gallery',
+      showMenu: true
+    },
+    {
+      menuId: 7,
+      menuName: 'Feedback',
+      menuDesc: 'Feedback',
+      showMenu: true
+    },
+    {
+      menuId: 8,
+      menuName: 'Enquiry Form',
+      menuDesc: 'Enquiry Form',
+      showMenu: true
+    },
+  ];
   constructor() {}
 
   //Services: Get all services list
@@ -440,7 +504,7 @@ export class ApiService {
     return tempList;
   }
 
-  //Payment Gateway: 
+  //Payment Gateway:
   public getPayableMobileNumberList() {
     return this.payableMobileNumberList;
   }
@@ -451,22 +515,26 @@ export class ApiService {
   }
 
   //Services - Get all insurence list
-  public getAlliInsurenceItemList(){
+  public getAlliInsurenceItemList() {
     return this.insurenceList;
   }
 
   //Trusted Brand - Get all slider image for life insurence
-  public getLifeIncImageList(){
+  public getLifeIncImageList() {
     return this.lifeIncImageList;
   }
 
   //Trusted Brand - Get all slider image for health insurence
-  public getHealthIncImageList(){
+  public getHealthIncImageList() {
     return this.healthIncImageList;
   }
 
   //Trusted Brand - Get all slider image for mutual fund
-  public getMutualFundImageList(){
+  public getMutualFundImageList() {
     return this.mutualFundImageList;
+  }
+  //Get Menu List
+  public getMenuList() {
+    return this.menuList;
   }
 }

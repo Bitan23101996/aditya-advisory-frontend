@@ -1,1 +1,19 @@
-<p>menu works!</p>
+<p-sidebar styleClass="menu-sidebar"  [dismissible]="false" [baseZIndex]="9999999" position="right" [modal]="true" [blockScroll]="true" [closeOnEscape]="false" [showCloseIcon]="false"  [(visible)]="displayMenu"> 
+
+    <div class="sidebar-container">
+        <a href="javascript:void(0);" class="close-menu-icon" appendTo="body"  (click)="toggleMenu()" 
+        pTooltip="Close menu" tooltipPosition="right">
+        <i class="fa-solid fa-square-xmark"></i>
+          </a>
+        <ul class="menu-item" *ngIf="menuList.length > 0">
+            <ng-container  *ngFor="let menu of menuList">
+                <li class="menu-item-list" *ngIf="menu.showMenu">
+                    <span class="menu-item-label" >{{menu.menuName}}</span>  
+                  </li>
+            </ng-container>
+            
+        </ul>
+    </div>
+    
+
+</p-sidebar>

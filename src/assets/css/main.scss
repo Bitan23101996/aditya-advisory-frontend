@@ -9,8 +9,16 @@ $font-color-normal: #4d4646;
 $secondary-font-family: "Crimson Text", serif;
 $section-label-font-family: "Philosopher", sans-serif;
 $app-background-color: #f7f6f6;
-
-body{
+$footer-background-color: #071527;
+$app-primary-gradient: linear-gradient(
+  to bottom,
+  #0b90d2,
+  #0081e2,
+  #006eee,
+  #0055f1,
+  #4c2dea
+);
+body {
   background-color: $app-background-color !important;
 }
 html {
@@ -59,6 +67,86 @@ COMMON SECTION DESIGN
 
 /*
 ----------------------------------------------------
+SOCIAL MEDIA SECTION DESIGN
+---------------------------------------------------
+*/
+.social-media-icon-section {
+  background-image: $app-primary-gradient;
+  color: #fff;
+  display: flex;
+  justify-content: flex-end;
+}
+.social-media-icon-section span .social-icon {
+  padding: 6px 5px;
+  font-size: 1.5rem;
+  margin-right: 15px;
+}
+
+/*
+----------------------------------------------------
+MENU ITEM SECTION DESIGN
+---------------------------------------------------
+*/
+
+.open-menu-icon {
+  background-color: $primary-color;
+  font-size: 1.5rem;
+  position: fixed;
+  right: 0px;
+  z-index: 9999999;
+  top: 10%;
+  width: 50px;
+  height: 50px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+.open-menu-icon i {
+  color: #fff;
+  font-size: 1.2rem;
+  margin-left: 15px;
+  display: inline-block;
+  margin-top: 14px;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  padding: 5px;
+  margin-top: 50%;
+}
+.menu-item-label {
+  font-size: 1.3rem;
+  margin: 2px;
+  letter-spacing: 1.5px;
+  font-family: $section-label-font-family;
+}
+.menu-item-label:hover {
+  border-bottom: 3px solid $primary-color;
+  cursor: pointer;
+}
+.menu-item-list {
+  padding: 7px;
+}
+.menu-sidebar.p-sidebar .p-sidebar-header,
+.menu-sidebar.p-sidebar .p-sidebar .p-sidebar-footer {
+  display: none;
+}
+
+.close-menu-icon {
+  color: $primary-color;
+    font-size: 2.5rem;
+    position: absolute;
+    left: -2px;
+    z-index: 9999999;
+    top: -14px;
+    width: 50px;
+    height: 50px;
+}
+
+/*
+----------------------------------------------------
 COMPANY LOGO SECTION DESIGN
 ---------------------------------------------------
 */
@@ -72,14 +160,7 @@ COMPANY LOGO SECTION DESIGN
   width: 100%;
   margin-bottom: 120px;
   margin-top: -5px;
-  background-image: linear-gradient(
-    to bottom,
-    #0b90d2,
-    #0081e2,
-    #006eee,
-    #0055f1,
-    #4c2dea
-  );
+  background-image: $app-primary-gradient;
 }
 .company-logo-image {
   position: absolute;
@@ -165,7 +246,7 @@ input[type="checkbox"].myClass:checked + label {
   opacity: 1;
   font-weight: 800;
 }
-.serviceItemIcon{
+.serviceItemIcon {
   font-size: 1.2rem;
 }
 .insurenceImgUrl {
@@ -181,7 +262,7 @@ input[type="checkbox"].myClass:checked + label {
   -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
 }
-.insurence-card .custom-insurence-badge{
+.insurence-card .custom-insurence-badge {
   position: absolute;
   left: 10px;
   top: -12px;
@@ -196,30 +277,31 @@ input[type="checkbox"].myClass:checked + label {
   font-family: $secondary-font-family;
   color: $font-color-normal;
 }
-.insurence-card .priceKey{
+.insurence-card .priceKey {
   margin-right: 5px;
 }
-.insurence-card .priceKey, .insurence-card .priceValue{
+.insurence-card .priceKey,
+.insurence-card .priceValue {
   font-size: 1.1rem;
   letter-spacing: 1px;
 }
-.insurence-card .enquiry-text{
+.insurence-card .enquiry-text {
   font-size: 1rem;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: #ffffff;
-    letter-spacing: 1px;
-    font-weight: 500;
-    position: absolute;
-    bottom: 10px;
-    right: -15px;
-    border: 1px solid $primary-color;
-    padding: 2px 3px;
-    background: $primary-color;
-    border-radius: 5px;
-    -webkit-box-shadow: 2px 7px 12px -6px rgba(0,0,0,0.75);
-    -moz-box-shadow: 2px 7px 12px -6px rgba(0,0,0,0.75);
-    box-shadow: 2px 7px 12px -6px rgba(0,0,0,0.75);
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  letter-spacing: 1px;
+  font-weight: 500;
+  position: absolute;
+  bottom: 10px;
+  right: -15px;
+  border: 1px solid $primary-color;
+  padding: 2px 3px;
+  background: $primary-color;
+  border-radius: 5px;
+  -webkit-box-shadow: 2px 7px 12px -6px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 2px 7px 12px -6px rgba(0, 0, 0, 0.75);
+  box-shadow: 2px 7px 12px -6px rgba(0, 0, 0, 0.75);
 }
 /* .insurence-card .card-header-section{
   height: 50px;
@@ -232,17 +314,53 @@ PAYMENT SECTION DESIGN
 ---------------------------------------------------
 */
 
-.qr-code-img{
+.qr-code-img {
   height: 350px;
   width: 100%;
 }
 
-#trusted-brand-image-slider-section .ng-image-slider .ng-image-slider-container .main .main-inner .img-div img, .ng-image-slider .ng-image-slider-container .main .main-inner .img-div video{
+/*
+----------------------------------------------------
+TRUSTED BRAND SECTION DESIGN
+---------------------------------------------------
+*/
+#trusted-brand-image-slider-section {
+  padding: 0 3%;
+}
+#trusted-brand-image-slider-section
+  .ng-image-slider
+  .ng-image-slider-container
+  .main
+  .main-inner
+  .img-div
+  img,
+.ng-image-slider .ng-image-slider-container .main .main-inner .img-div video {
   border-radius: 0;
   padding: 5px;
   // border: 1px solid $secondary-color;
 }
 
-#trusted-brand-image-slider-section .ng-image-slider .ng-image-slider-container .main .main-inner .img-div{
+#trusted-brand-image-slider-section
+  .ng-image-slider
+  .ng-image-slider-container
+  .main
+  .main-inner
+  .img-div {
   box-shadow: none;
+}
+
+/*
+----------------------------------------------------
+FOOTER SECTION DESIGN
+---------------------------------------------------
+*/
+#footer {
+  background: $footer-background-color;
+  padding: 25px 45px;
+  color: #fff;
+  font-size: 1.05rem;
+}
+
+#footer .copyright {
+  text-align: center;
 }

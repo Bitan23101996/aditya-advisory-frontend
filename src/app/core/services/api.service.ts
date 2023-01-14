@@ -4,6 +4,7 @@ import { InsurenceItem } from '../models/insurence-item.model';
 import { PayableMobileNumber } from '../models/payable-mobile-no.model';
 import { QRCode } from '../models/qr-code.model';
 import { ServiceItem } from '../models/service-item.model';
+import { TrustedBrandImg } from '../models/trusted-brand-img.model';
 
 @Injectable({
   providedIn: 'root',
@@ -247,8 +248,186 @@ export class ApiService {
       qrCodeImgUrl: "assets/images/qr-codes/qr.jpg",
     },
   ];
+
+  //Life Insurence Array
+  lifeIncImageList: TrustedBrandImg[] =[
+    {
+      thumbImage: 'assets/images/trusted-brand/LifeInc/LifeInc_HDFC.png',
+      trustedBrandImgId: 1,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/LifeInc/LifeInc_ICICI_Prudential.png',
+      trustedBrandImgId: 2,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/LifeInc/LifeInc_LIC.png',
+      trustedBrandImgId: 3,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/LifeInc/LifeInc_MAX.png',
+      trustedBrandImgId: 4,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/LifeInc/LifeInc_TATA_AIA.png',
+      trustedBrandImgId: 5,
+    }
+  ]
+
+  //Health Insurence Array
+  healthIncImageList: TrustedBrandImg[] =[
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_aditya-birla-capital-limited.jpg',
+      trustedBrandImgId: 1,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_bajaj.png',
+      trustedBrandImgId: 2,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_care_health.png',
+      trustedBrandImgId: 3,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_cholams.png',
+      trustedBrandImgId: 4,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_hdfc-ergo.png',
+      trustedBrandImgId: 5,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_icici_insurance.jpg',
+      trustedBrandImgId: 6,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_kotak-general.jpg',
+      trustedBrandImgId: 7,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_liberty.jpg',
+      trustedBrandImgId: 8,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_tata_aig.png',
+      trustedBrandImgId: 9,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_Universal-Sompo.jpg',
+      trustedBrandImgId: 10,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthIncStar_Health.png',
+      trustedBrandImgId: 11,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_national.png',
+      trustedBrandImgId: 12,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_navi.png',
+      trustedBrandImgId: 13,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_SBI.png',
+      trustedBrandImgId: 14,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_shriram.jpeg',
+      trustedBrandImgId: 15,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_magma_hdi.png',
+      trustedBrandImgId: 16,
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/HealthInc/healthInc_manipal.png',
+      trustedBrandImgId: 17,
+    }
+  ]
+
+  mutualFundImageList: TrustedBrandImg[] = [
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_aditya_birla.png',
+      trustedBrandImgId: 1,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_axis.png',
+      trustedBrandImgId: 2,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_Ben_Head_franklin.jpg',
+      trustedBrandImgId: 3,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_birla.jpg',
+      trustedBrandImgId: 4,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_dsp.png',
+      trustedBrandImgId: 5,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_edleweiss.png',
+      trustedBrandImgId: 6,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_hdfc.png',
+      trustedBrandImgId: 7,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_icici.png',
+      trustedBrandImgId: 8,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_kotak.png',
+      trustedBrandImgId: 9,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_landt.png',
+      trustedBrandImgId: 10,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_lic.png',
+      trustedBrandImgId: 11,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_motilal.png',
+      trustedBrandImgId: 12,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_mutualFund.jpg',
+      trustedBrandImgId: 13,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_nippon.png',
+      trustedBrandImgId: 14,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_pgim.png',
+      trustedBrandImgId: 15,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_quant.jpg',
+      trustedBrandImgId: 16,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_sbi.png',
+      trustedBrandImgId: 17,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_tata.jpg',
+      trustedBrandImgId: 18,      
+    },
+    {
+      thumbImage: 'assets/images/trusted-brand/mFund/mFund_uti.jpg',
+      trustedBrandImgId: 19,      
+    }
+
+  ]
+
   constructor() {}
 
+  //Services: Get all services list
   public getServiceList() {
     return this.serviceItemList;
   }
@@ -261,15 +440,33 @@ export class ApiService {
     return tempList;
   }
 
+  //Payment Gateway: 
   public getPayableMobileNumberList() {
     return this.payableMobileNumberList;
   }
 
+  //Paymnet - Get All QR List
   public getQRCodeList() {
     return this.QRCodeList;
   }
 
+  //Services - Get all insurence list
   public getAlliInsurenceItemList(){
     return this.insurenceList;
+  }
+
+  //Trusted Brand - Get all slider image for life insurence
+  public getLifeIncImageList(){
+    return this.lifeIncImageList;
+  }
+
+  //Trusted Brand - Get all slider image for health insurence
+  public getHealthIncImageList(){
+    return this.healthIncImageList;
+  }
+
+  //Trusted Brand - Get all slider image for mutual fund
+  public getMutualFundImageList(){
+    return this.mutualFundImageList;
   }
 }

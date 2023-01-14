@@ -1,1 +1,49 @@
-<p>trusted-brand works!</p>
+<section id="trusted-brand-section">
+  <div class="section-title mt-4 mb-4">
+    <h2 class="text-uppercase">Trusted Brands</h2>
+  </div>
+</section>
+
+<!-- ======= Trusted Brand : Marquee Design Slider  ======= -->
+<div id="trusted-brand-image-slider-section">
+  <!-- Life Insurence -->
+  <ng-image-slider
+    [images]="lifeIncImageList"
+    [infinite]="true"
+    [autoSlide]="{ interval: 3, stopOnHover: true }"
+    [slideImage]="1"
+    [imagePopup]="false"
+    [showArrow]="false"
+    [imageSize]="{ width: '300px', height: '180px', space: 1 }"
+    #nav
+  ></ng-image-slider>
+  <!-- END Life Insurence -->
+
+  <!-- Health Insurence -->
+  <ng-image-slider
+    [images]="healthIncImageList"
+    [infinite]="true"
+    [autoSlide]="{ interval: 3, stopOnHover: true }"
+    [slideImage]="2"
+    [imagePopup]="false"
+    [showArrow]="false"
+    [imageSize]="{ width: '300px', height: '180px', space: 2 }"
+    #nav
+  ></ng-image-slider>
+  <!-- END Health Insurence -->
+
+  <!-- Mutual Fund -->
+  <ng-image-slider
+    [images]="mutualFundImageList"
+    [infinite]="true"
+    [autoSlide]="{ interval: 3, stopOnHover: true }"
+    [slideImage]="1"
+    [imagePopup]="false"
+    [showArrow]="false"
+    [imageSize]="{ width: '300px', height: '180px', space: 3 }"
+    #nav
+  ></ng-image-slider>
+  <!-- END Mutual Fund -->
+</div>
+
+<!-- ======= END Marquee Design Slider ======= -->

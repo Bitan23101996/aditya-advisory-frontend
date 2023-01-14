@@ -8,7 +8,11 @@ $secondary-color: #0372aa;
 $font-color-normal: #4d4646;
 $secondary-font-family: "Crimson Text", serif;
 $section-label-font-family: "Philosopher", sans-serif;
+$app-background-color: #f7f6f6;
 
+body{
+  background-color: $app-background-color !important;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -231,4 +235,14 @@ PAYMENT SECTION DESIGN
 .qr-code-img{
   height: 350px;
   width: 100%;
+}
+
+#trusted-brand-image-slider-section .ng-image-slider .ng-image-slider-container .main .main-inner .img-div img, .ng-image-slider .ng-image-slider-container .main .main-inner .img-div video{
+  border-radius: 0;
+  padding: 5px;
+  // border: 1px solid $secondary-color;
+}
+
+#trusted-brand-image-slider-section .ng-image-slider .ng-image-slider-container .main .main-inner .img-div{
+  box-shadow: none;
 }

@@ -1,1 +1,41 @@
-<p>enquiry works!</p>
+<section id="enquiry-form-section"> 
+    <div class="section-title mt-4 mb-4">
+      <h2 class="text-uppercase">Enquiry Form</h2>
+    </div>
+    <div class="card enquiry-form-card mb-5">
+        <div class="card-body enquiry-form-card-body">
+            <div class="row">
+                <!--Name-->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
+                    <input type="text" class="form-control" id="name" maxlength="30" placeholder="Enter your name">
+                </div>
+                <!--Email-->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
+                    <input type="email" class="form-control" maxlength="30" id="email" placeholder="name@example.com">
+                </div>
+                <!--Mobile-->
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+                    <label for="mobile" class="form-label">Mobile<span class="text-error">*</span></label>
+                    <input type="text" class="form-control" id="mobile" maxlength="10" placeholder="Your 10 digit mobile number">
+                </div>
+                <!--Message-->
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
+                    <label for="message" class="form-label">Message<span class="text-error">*</span></label>
+                    <textarea class="form-control" id="message" rows="6" maxlength="2000" placeholder="Type your message..."></textarea>
+                </div>
+                <!--Submit Button-->
+                <p class="text-error mandatory-text">* All fields are mandatory</p>
+
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
+                <button type="button" (click)="sendEnquiry()" class="btn btn-lg btn-primary primaryBtn" pTooltip="Click to send message" tooltipPosition="right">
+                    <i class="fa-solid fa-paper-plane" ></i>
+                    Send Message
+                </button>    
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+  

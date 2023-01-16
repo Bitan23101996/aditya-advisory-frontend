@@ -47,14 +47,17 @@ COMMON SECTION DESIGN
 ---------------------------------------------------
 */
 
+
+
+
 .section-title h2 {
   font-family: "Crimson Text", serif;
   font-family: $section-label-font-family;
   font-weight: 700;
-  color: #ed502e;
+  color: $primary-color;
   font-size: 2.5rem;
   margin: 0 0 15px;
-  border-left: 7px solid #0372aa;
+  border-left: 7px solid $secondary-color;
   padding-left: 15px;
   text-shadow: 2px -1px 3px rgb(9 9 9 / 59%);
 }
@@ -364,4 +367,62 @@ FOOTER SECTION DESIGN
 
 #footer .copyright {
   text-align: center;
+}
+
+
+/*
+----------------------------------------------------
+ENQUIRY SECTION DESIGN
+---------------------------------------------------
+*/
+
+.enquiry-form-card{
+  border-radius: 10px !important;
+  border: 1px solid $secondary-color !important;
+  padding: 10px;
+  -webkit-box-shadow: 4px 15px 17px -10px rgba(0,0,0,0.75);
+  -moz-box-shadow: 4px 15px 17px -10px rgba(0,0,0,0.75);
+  box-shadow: 4px 15px 17px -10px rgba(0,0,0,0.75);
+}
+
+.text-error{
+  color: $primary-color !important;
+}
+
+.mandatory-text{
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+/*
+----------------------------------------------------
+FORM - BUTTON DESIGN
+---------------------------------------------------
+*/
+
+.form-label{
+  color: $secondary-color !important;
+  font-weight: bold;
+}
+.form-control{
+  border-radius: 15px !important;
+}
+.form-control:focus {
+  border-color: $secondary-color !important;
+  box-shadow: none !important;
+}
+
+.primaryBtn{
+  background-color: $primary-color !important;
+  border: 1px solid $primary-color !important;
+  border-radius: 20px !important;
+  font-size: 1.1rem !important;
+  letter-spacing: 1.5px !important;
+  -webkit-box-shadow: -1px 15px 7px -9px rgba(0,0,0,0.75) !important;
+  -moz-box-shadow: -1px 15px 7px -9px rgba(0,0,0,0.75) !important;
+  box-shadow: -1px 15px 7px -9px rgba(0,0,0,0.75) !important;
+}
+.primaryBtn:hover{
+  background-color: $secondary-color !important;
+  border: 1px solid $secondary-color !important;
 }

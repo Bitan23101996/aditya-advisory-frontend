@@ -12,4 +12,8 @@ export class EnquiryComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  public sendEnquiry(){
+
+  }
+
 }

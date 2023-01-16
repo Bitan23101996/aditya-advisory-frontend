@@ -5,6 +5,7 @@ import { Menu } from '../models/menu.model';
 import { PayableMobileNumber } from '../models/payable-mobile-no.model';
 import { QRCode } from '../models/qr-code.model';
 import { ServiceItem } from '../models/service-item.model';
+import { SocialMediaIconModel } from '../models/social-media-icon.model';
 import { TrustedBrandImg } from '../models/trusted-brand-img.model';
 
 @Injectable({
@@ -439,54 +440,97 @@ export class ApiService {
   ];
 
   //Menu List Array
-  menuList:Menu[] = [
+  menuList: Menu[] = [
     {
       menuId: 1,
       menuName: 'Home',
       menuDesc: 'Home',
-      showMenu: true
+      showMenu: true,
     },
     {
       menuId: 2,
       menuName: 'About',
       menuDesc: 'About',
-      showMenu: true
+      showMenu: true,
     },
     {
       menuId: 3,
       menuName: 'Services',
       menuDesc: 'Services',
-      showMenu: true
+      showMenu: true,
     },
     {
       menuId: 4,
       menuName: 'Trusted Brand',
       menuDesc: 'Trusted Brand',
-      showMenu: true
+      showMenu: true,
     },
     {
       menuId: 5,
       menuName: 'Payment',
       menuDesc: 'Payment',
-      showMenu: true
+      showMenu: true,
     },
     {
       menuId: 6,
       menuName: 'Gallery',
       menuDesc: 'Gallery',
-      showMenu: true
+      showMenu: true,
     },
     {
       menuId: 7,
       menuName: 'Feedback',
       menuDesc: 'Feedback',
-      showMenu: true
+      showMenu: true,
     },
     {
       menuId: 8,
       menuName: 'Enquiry Form',
       menuDesc: 'Enquiry Form',
-      showMenu: true
+      showMenu: true,
+    },
+  ];
+
+  socialMediaIconList: SocialMediaIconModel[] = [
+    {
+      iconId: 1,
+      iconUrl: 'fa-brands fa-whatsapp',
+      iconDesc: 'Whatsapp',
+    },
+    {
+      iconId: 2,
+      iconUrl: 'fa-brands fa-facebook',
+      iconDesc: 'Facebook',
+    },
+    {
+      iconId: 3,
+      iconUrl: 'fa-solid fa-envelope',
+      iconDesc: 'Mail',
+    },
+    {
+      iconId: 4,
+      iconUrl: 'fa-brands fa-twitter',
+      iconDesc: 'Twitter',
+    },
+    {
+      iconId: 5,
+      iconUrl: 'fa-brands fa-instagram',
+      iconDesc: 'Instagram',
+    },
+    {
+      iconId: 6,
+      iconUrl: 'fa-brands fa-youtube',
+      iconDesc: 'Youtube',
+    },
+    {
+      iconId: 7,
+      iconUrl: 'fa-brands fa-pinterest',
+      iconDesc: 'Pinterest',
+    },
+    {
+      iconId: 8,
+      iconUrl: 'fa-brands fa-linkedin',
+      iconDesc: 'Linkedin',
     },
   ];
   constructor() {}
@@ -536,5 +580,10 @@ export class ApiService {
   //Get Menu List
   public getMenuList() {
     return this.menuList;
+  }
+
+  //Get Social Media Icon List
+  public getSocialMediaIconList(){
+    return this.socialMediaIconList;
   }
 }

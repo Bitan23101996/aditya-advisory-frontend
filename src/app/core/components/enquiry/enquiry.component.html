@@ -4,26 +4,79 @@
     </div>
     <div class="card enquiry-form-card mb-5">
         <div class="card-body enquiry-form-card-body">
-            <div class="row">
+            <div class="row" [formGroup]="enquiryForm">
                 <!--Name-->
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
                     <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" id="name" maxlength="30" placeholder="Enter your name">
+                    <input type="text" formControlName="name" class="form-control" id="name" 
+                    [class]="submitted && enquiryForm.get('name')?.errors ? 'border-error' : ''"
+                    placeholder="Enter your name">
+
+                    <div class="text-error" *ngIf="submitted && enquiryForm.get('name')?.errors">
+                        <span *ngIf="enquiryForm.get('name')?.errors?.['required']">
+                            Name is required
+                        </span>
+                        <span *ngIf="enquiryForm.get('name')?.errors?.['minLength']">
+                            Name must be long
+                        </span>
+                    </div>
                 </div>
                 <!--Email-->
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
                     <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" maxlength="30" id="email" placeholder="name@example.com">
+                    <input type="email" formControlName="email" class="form-control"  
+                    [class]="submitted && enquiryForm.get('email')?.errors ? 'border-error' : ''"
+                    id="email" placeholder="name@example.com">
+
+                    <div class="text-error" *ngIf="submitted && enquiryForm.get('email')?.errors">
+                        <span *ngIf="enquiryForm.get('email')?.errors?.['required']">
+                            Email is required
+                        </span>
+                        <span *ngIf="enquiryForm.get('email')?.errors?.['pattern']">
+                            Invalid email format
+                        </span>
+                        <span *ngIf="enquiryForm.get('email')?.errors?.['minLength']">
+                            Email must be long
+                        </span>
+                    </div>
+
                 </div>
                 <!--Mobile-->
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
                     <label for="mobile" class="form-label">Mobile<span class="text-error">*</span></label>
-                    <input type="text" class="form-control" id="mobile" maxlength="10" placeholder="Your 10 digit mobile number">
+                    <input type="text" formControlName="mobile" class="form-control"
+                    [class]="submitted && enquiryForm.get('mobile')?.errors ? 'border-error' : ''"
+                    id="mobile" placeholder="Your 10 digit mobile number">
+
+                    <div class="text-error" *ngIf="submitted && enquiryForm.get('mobile')?.errors">
+                        <span *ngIf="enquiryForm.get('mobile')?.errors?.['required']">
+                            Mobile is required
+                        </span>
+                        <span *ngIf="enquiryForm.get('mobile')?.errors?.['pattern']">
+                            Invalid mobile format
+                        </span>
+                        <span *ngIf="enquiryForm.get('mobile')?.errors?.['minLength']">
+                            Mobile must be long
+                        </span>
+                    </div>
+
                 </div>
                 <!--Message-->
                 <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
                     <label for="message" class="form-label">Message<span class="text-error">*</span></label>
-                    <textarea class="form-control" id="message" rows="6" maxlength="2000" placeholder="Type your message..."></textarea>
+                    <textarea class="form-control" formControlName="message"
+                    [class]="submitted && enquiryForm.get('message')?.errors ? 'border-error' : ''"
+                    id="message" rows="6" placeholder="Type your message..."></textarea>
+
+                    <div class="text-error" *ngIf="submitted && enquiryForm.get('message')?.errors">
+                        <span *ngIf="enquiryForm.get('message')?.errors?.['required']">
+                            Message is required
+                        </span>
+                        <span *ngIf="enquiryForm.get('message')?.errors?.['minLength']">
+                            Message must be long
+                        </span>
+                    </div>
+
                 </div>
                 <!--Submit Button-->
                 <p class="text-error mandatory-text">* All fields are mandatory</p>
@@ -39,3 +92,7 @@
     </div>
   </section>
   
+
+
+
+ 

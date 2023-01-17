@@ -385,9 +385,15 @@ ENQUIRY SECTION DESIGN
   box-shadow: 4px 15px 17px -10px rgba(0,0,0,0.75);
 }
 
-.text-error{
+.text-error {
   color: $primary-color !important;
 }
+
+.border-error{
+  border: 1px solid $primary-color !important;
+}
+
+
 
 .mandatory-text{
   font-size: 0.8rem;

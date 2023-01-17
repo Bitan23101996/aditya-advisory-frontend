@@ -1,5 +1,7 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
+import { EnquiryFormModel } from '../models/enquiry-form.model';
 import { InsurenceItem } from '../models/insurence-item.model';
 import { Menu } from '../models/menu.model';
 import { PayableMobileNumber } from '../models/payable-mobile-no.model';
@@ -7,11 +9,13 @@ import { QRCode } from '../models/qr-code.model';
 import { ServiceItem } from '../models/service-item.model';
 import { SocialMediaIconModel } from '../models/social-media-icon.model';
 import { TrustedBrandImg } from '../models/trusted-brand-img.model';
-
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root',
 })
 export class ApiService {
+  baseUrl: string = environment.baseUrl;
+
   serviceItemList: ServiceItem[] = [
     {
       serviceItemId: 1,
@@ -533,7 +537,7 @@ export class ApiService {
       iconDesc: 'Linkedin',
     },
   ];
-  constructor() {}
+  constructor(private http: HttpClient) {}
 
   //Services: Get all services list
   public getServiceList() {
@@ -583,7 +587,15 @@ export class ApiService {
   }
 
   //Get Social Media Icon List
-  public getSocialMediaIconList(){
+  public getSocialMediaIconList() {
     return this.socialMediaIconList;
+  }
+
+  //Send enquiry form data
+  public sendEnquiryForm(query: EnquiryFormModel): Observable<any> {
+    return this.http.post<EnquiryFormModel>(
+      `${this.baseUrl}/saveEnuiryData`,
+      query
+    );
   }
 }

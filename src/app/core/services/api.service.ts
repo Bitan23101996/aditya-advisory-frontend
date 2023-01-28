@@ -489,8 +489,8 @@ export class ApiService {
     },
     {
       menuId: 8,
-      menuName: 'Enquiry Form',
-      menuDesc: 'Enquiry Form',
+      menuName: 'Contact Us',
+      menuDesc: 'Contact Us',
       showMenu: true,
     },
   ];

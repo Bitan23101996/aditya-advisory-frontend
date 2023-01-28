@@ -155,35 +155,65 @@ COMPANY LOGO SECTION DESIGN
 ---------------------------------------------------
 */
 
-#company-logo-section .logo-container {
-  position: relative;
+.logo-container-item{
   display: flex;
-  flex-direction: column;
+  // justify-content: space-evenly;
   align-items: center;
-  height: 250px;
+}
+
+
+#company-logo-section .logo-container {
+  /*position: relative;
+   display: flex;
+  flex-direction: column;
+  align-items: center; */
+  height: 210px;
   width: 100%;
-  margin-bottom: 120px;
+  margin-bottom: 90px;
   margin-top: -5px;
   background-image: $app-primary-gradient;
 }
 .company-logo-image {
-  position: absolute;
-  bottom: -95px;
-  height: 230px;
-  width: 540px;
+ /*  position: absolute;
+  bottom: -95px; */
+  height: 190px;
+  // width: 540px;
+  width: 100%;
   border: 5px solid #2f69f8;
   border-radius: 10px;
   -webkit-box-shadow: -1px -6px 11px -1px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: -1px -6px 11px -1px rgba(0, 0, 0, 0.75);
   box-shadow: -1px -6px 11px -1px rgba(0, 0, 0, 0.75);
 }
+.align-item-center {
+  align-items: center;
+}
 
 .company-title {
+  text-align: center;
   font-family: $section-label-font-family;
   color: #fff;
   text-shadow: -2px 6px 6px rgb(0 0 0 / 59%);
-  font-size: 3.5rem;
-  margin-top: 20px;
+  font-size: 3rem;
+  margin-top: 3px;
+  margin-bottom: 15px;
+}
+
+.logo-section-label{
+  color: #fff;
+  font-size: 1rem;
+  font-family: $section-label-font-family;
+  text-decoration: none;
+}
+.logo-section-icon{
+  color: #fff;
+  font-size: 1rem;
+}
+.logo-section-label:hover{
+  color: #fff;
+  font-weight: 600;
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 /*

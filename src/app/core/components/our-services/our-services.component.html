@@ -32,35 +32,72 @@
       <ng-container *ngIf="insurenceItemList.length > 0">
         <ng-container *ngFor="let insurenceItem of insurenceItemList">
           <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 mb-4">
-           
-              <div class="card insurence-card">
-                <div class="card-body posotion-relative">
-                  <!-- <span class="badge custom-insurence-badge" *ngIf="insurenceItem.serviceItemLabel != null">{{insurenceItem?.serviceItemLabel}}</span> -->
-                  <div class="card-header-section">
-                    <h3 class="card-heading-text">{{insurenceItem?.serviceItemLabel == null ? 'N/A' : insurenceItem?.serviceItemLabel}}</h3>
-                    <p class="card-desc-text mb-1">
-                      {{ insurenceItem.insurenceDesc | slice:0:160 }} {{insurenceItem.insurenceDesc.length > 160 ? '...' : ''}}
-                    </p>
-                  </div>
-                 
-                    <img [src]="insurenceItem.insurenceImgUrl" class="insurenceImgUrl" alt="Image Content"/>
-                  <div class="row mt-2">
-                    <div class="col-6">
-                      <!-- <strong class="priceKey">Price:</strong>
+            <div class="card insurence-card" [class.active]="selectedInsurenceItem === insurenceItem.serviceItemId">
+              <div class="card-body posotion-relative">
+                <!-- <span class="badge custom-insurence-badge" *ngIf="insurenceItem.serviceItemLabel != null">{{insurenceItem?.serviceItemLabel}}</span> -->
+                <div class="card-header-section">
+                  <h3 class="card-heading-text">
+                    {{
+                      insurenceItem?.serviceItemLabel == null
+                        ? "N/A"
+                        : insurenceItem?.serviceItemLabel
+                    }}
+                  </h3>
+                  <p class="card-desc-text mb-1">
+                    {{ insurenceItem.insurenceDesc | slice : 0 : 160 }}
+                    {{ insurenceItem.insurenceDesc.length > 160 ? "..." : "" }}
+                  </p>
+                </div>
+
+                <img
+                  [src]="insurenceItem.insurenceImgUrl"
+                  class="insurenceImgUrl"
+                  alt="Image Content"
+                />
+                <div class="row mt-2">
+                  <div class="col-6">
+                    <!-- <strong class="priceKey">Price:</strong>
                       <label class="ml-2 priceValue">{{insurenceItem?.insurencePrice == null ? 'N/A' : insurenceItem?.insurencePrice}}</label>
                        -->
-                    </div>
-                    <div class="col-6 text-end">
-                      <a href="javascript:void(0);" class="enquiry-text" pTooltip="Click to enquiry" tooltipPosition="left"><i class="fa-solid fa-clipboard-question" ></i> Enquiry </a>
-                    </div>
+                  </div>
+                  <div class="col-6 text-end">
+                    <a
+                      href="javascript:void(0);"
+                      class="enquiry-text"
+                      (click)="openEnuiryDialog(insurenceItem)"
+                      pTooltip="Click to enquiry"
+                      tooltipPosition="left"
+                    >
+                      <i class="fa-solid fa-clipboard-question"></i>
+                      Enquiry
+                    </a>
                   </div>
                 </div>
               </div>
-            
-            
+            </div>
           </div>
         </ng-container>
       </ng-container>
     </div>
   </div>
 </section>
+
+<!--Open Enuiry Dialog Form-->
+<p-sidebar
+  styleClass="enquiry-dialog-modal"
+  [(visible)]="displayEnuiryDialog"
+  [fullScreen]="true"
+  [modal]="true"
+  [closeOnEscape]="false"
+  [blockScroll]="true"
+  [baseZIndex]="10000"
+  (onHide)="closeEnuiryDialog()"
+>
+  <div class="container">
+    <div class="card enquiry-form-card mb-5">
+      <div class="card-body enquiry-form-card-body">
+        <app-enuiry-form></app-enuiry-form>
+      </div>
+    </div>
+  </div>
+</p-sidebar>

@@ -10,6 +10,7 @@ $secondary-font-family: "Crimson Text", serif;
 $section-label-font-family: "Philosopher", sans-serif;
 $app-background-color: #f7f6f6;
 $footer-background-color: #071527;
+$primaryy-active-color: #ff2d002b;
 $app-primary-gradient: linear-gradient(
   to bottom,
   #0b90d2,
@@ -301,6 +302,12 @@ input[type="checkbox"].myClass:checked + label {
   -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
 }
+.insurence-card.active{
+  border-top: 5px solid $primary-color !important;
+}
+.insurence-card.active .card-body{
+  background-color: $primaryy-active-color;
+}
 .insurence-card .custom-insurence-badge {
   position: absolute;
   left: 10px;
@@ -347,6 +354,15 @@ input[type="checkbox"].myClass:checked + label {
   background-color: red;
 } */
 
+.enquiry-dialog-modal.p-sidebar .p-sidebar-close, 
+.enquiry-dialog-modal.p-sidebar .p-sidebar-icon{
+  color: #fff !important;
+  background: $primary-color !important;
+}
+
+.enquiry-dialog-modal.p-sidebar {
+  background: #101010d1 !important;
+}
 /*
 ----------------------------------------------------
 PAYMENT SECTION DESIGN
@@ -428,12 +444,41 @@ ENQUIRY SECTION DESIGN
   border: 1px solid $primary-color !important;
 }
 
-
-
 .mandatory-text{
   font-size: 0.8rem;
   font-style: italic;
 }
+.info-box{
+  color: #0b2341;
+  text-align: center;
+  padding: 9px 0;
+  background: #fff;
+  
+}
+ .info-box i {
+  font-size: 32px;
+  color: #ed502e;
+  border-radius: 15px;
+  padding: 8px;
+  border: 2px dotted #fbdad2;
+}
+.info-box h3 {
+  font-size: 1.5rem;
+  color: #777777;
+  font-weight: 700;
+  font-family: $section-label-font-family;
+}
+.info-box p{
+  font-family: $secondary-font-family; 
+}
+.info-box p a:hover{
+ font-weight: 600;
+}
+.info-card-box{
+  border: 1px solid $secondary-color !important; 
+  box-shadow: 4px 15px 17px -10px rgb(0 0 0 / 75%);
+}
+
 
 /*
 ----------------------------------------------------

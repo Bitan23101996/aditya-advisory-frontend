@@ -9,10 +9,14 @@ import { BroadcastService } from './core/services/broadcast.service';
 export class AppComponent implements OnInit {
   title = 'aditya-advisory-frontend';
   displayMenu: boolean = false;
-
+  displayFixedMenuBtn:boolean = true;
   constructor(private broadcastService: BroadcastService) {
     this.broadcastService.menuVisibility.subscribe((res)=>{
       this.displayMenu = res;
+    });
+
+    this.broadcastService.fixedMenuBtnVisibility.subscribe((res)=>{
+      this.displayFixedMenuBtn = res;
     })
   }
 

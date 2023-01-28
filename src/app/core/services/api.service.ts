@@ -468,7 +468,7 @@ export class ApiService {
     },
     {
       menuId: 4,
-      menuName: 'Trusted Brand',
+      menuName: 'Trusted Brands',
       menuDesc: 'Trusted Brand',
       showMenu: true,
       redirectTo: 'trusted-brand-section'
@@ -477,21 +477,21 @@ export class ApiService {
       menuId: 5,
       menuName: 'Payment',
       menuDesc: 'Payment',
-      showMenu: true,
+      showMenu: false,
       redirectTo: ''
     },
     {
       menuId: 6,
       menuName: 'Gallery',
       menuDesc: 'Gallery',
-      showMenu: true,
+      showMenu: false,
       redirectTo: ''
     },
     {
       menuId: 7,
       menuName: 'Feedback',
       menuDesc: 'Feedback',
-      showMenu: true,
+      showMenu: false,
       redirectTo: ''
     },
     {

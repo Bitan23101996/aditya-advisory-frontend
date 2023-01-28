@@ -1,98 +1,60 @@
-<section id="enquiry-form-section"> 
-    <div class="section-title mt-4 mb-4">
-      <h2 class="text-uppercase">Contact Us</h2>
-    </div>
-    <div class="card enquiry-form-card mb-5">
-        <div class="card-body enquiry-form-card-body">
-            <div class="row" [formGroup]="enquiryForm">
-                <!--Name-->
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-                    <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
-                    <input type="text" formControlName="name" class="form-control" id="name" 
-                    [class]="submitted && enquiryForm.get('name')?.errors ? 'border-error' : ''"
-                    placeholder="Enter your name">
-
-                    <div class="text-error" *ngIf="submitted && enquiryForm.get('name')?.errors">
-                        <span *ngIf="enquiryForm.get('name')?.errors?.['required']">
-                            Name is required
-                        </span>
-                        <span *ngIf="enquiryForm.get('name')?.errors?.['minLength']">
-                            Name must be long
-                        </span>
-                    </div>
-                </div>
-                <!--Email-->
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-                    <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
-                    <input type="email" formControlName="email" class="form-control"  
-                    [class]="submitted && enquiryForm.get('email')?.errors ? 'border-error' : ''"
-                    id="email" placeholder="name@example.com">
-
-                    <div class="text-error" *ngIf="submitted && enquiryForm.get('email')?.errors">
-                        <span *ngIf="enquiryForm.get('email')?.errors?.['required']">
-                            Email is required
-                        </span>
-                        <span *ngIf="enquiryForm.get('email')?.errors?.['pattern']">
-                            Invalid email format
-                        </span>
-                        <span *ngIf="enquiryForm.get('email')?.errors?.['minLength']">
-                            Email must be long
-                        </span>
-                    </div>
-
-                </div>
-                <!--Mobile-->
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
-                    <label for="mobile" class="form-label">Mobile<span class="text-error">*</span></label>
-                    <input type="text" formControlName="mobile" class="form-control"
-                    [class]="submitted && enquiryForm.get('mobile')?.errors ? 'border-error' : ''"
-                    id="mobile" placeholder="Your 10 digit mobile number">
-
-                    <div class="text-error" *ngIf="submitted && enquiryForm.get('mobile')?.errors">
-                        <span *ngIf="enquiryForm.get('mobile')?.errors?.['required']">
-                            Mobile is required
-                        </span>
-                        <span *ngIf="enquiryForm.get('mobile')?.errors?.['pattern']">
-                            Invalid mobile format
-                        </span>
-                        <span *ngIf="enquiryForm.get('mobile')?.errors?.['minLength']">
-                            Mobile must be long
-                        </span>
-                    </div>
-
-                </div>
-                <!--Message-->
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-3">
-                    <label for="message" class="form-label">Message<span class="text-error">*</span></label>
-                    <textarea class="form-control" formControlName="message"
-                    [class]="submitted && enquiryForm.get('message')?.errors ? 'border-error' : ''"
-                    id="message" rows="6" placeholder="Type your message..."></textarea>
-
-                    <div class="text-error" *ngIf="submitted && enquiryForm.get('message')?.errors">
-                        <span *ngIf="enquiryForm.get('message')?.errors?.['required']">
-                            Message is required
-                        </span>
-                        <span *ngIf="enquiryForm.get('message')?.errors?.['minLength']">
-                            Message must be long
-                        </span>
-                    </div>
-
-                </div>
-                <!--Submit Button-->
-                <p class="text-muted mandatory-text">* All fields are mandatory</p>
-
-                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
-                <button type="button" (click)="sendEnquiry()" class="btn btn-lg btn-primary primaryBtn" pTooltip="Click to send message" tooltipPosition="right">
-                    <i class="fa-solid fa-paper-plane" ></i>
-                    Send Message
-                </button>    
-                </div>
+<section id="enquiry-form-section">
+  <div class="section-title mt-5 mb-4">
+    <h2 class="text-uppercase">Contact Us</h2>
+  </div>
+  <div class="row">
+    <div class="col-5">
+      <div class="row">
+        <div class="col-12">
+          <div class="card info-card-box">
+            <div class="card-body">
+              <div class="info-box">
+                <i class="fa-solid fa-location-dot mb-3"></i>
+                <h3>Our Address</h3>
+                <p class="mb-0">250 Silcon Neer, Ground Floor, Purbaputiary, Kolkata-93</p>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="col-6 mt-4">
+          <div class="card info-card-box">
+            <div class="card-body">
+              <div class="info-box">
+                <i class="fa-sharp fa-solid fa-envelope mb-3"></i>
+                <h3>Email Us</h3>
+                <p class="mb-4">
+                  <a
+                    class="text-error"
+                    href="mailto:adityacare4you@gmail.com"
+                    >adityacare4you@gmail.com</a
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 mt-4">
+          <div class="card info-card-box">
+            <div class="card-body">
+              <div class="info-box">
+                <i class="fa-solid fa-phone-volume mb-3"></i>
+                <h3>Call Us</h3>
+                <p class="mb-0">
+                  <a href="tel:9830947257" class="text-error">+91-9830 947 257</a><br />
+                  <a href="tel:8420009666" class="text-error">+91-8420 009 666</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-  </section>
-  
-
-
-
- 
+    <div class="col-7">
+      <div class="card enquiry-form-card mb-5">
+        <div class="card-body enquiry-form-card-body">
+          <app-enuiry-form></app-enuiry-form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

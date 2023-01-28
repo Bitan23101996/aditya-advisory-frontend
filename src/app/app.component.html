@@ -1,4 +1,4 @@
-<a href="javascript:void(0);" class="open-menu-icon" (click)="toggleMenu()" pTooltip="Open menu" tooltipPosition="left">
+<a *ngIf="displayFixedMenuBtn" href="javascript:void(0);" class="open-menu-icon" (click)="toggleMenu()" pTooltip="Open menu" tooltipPosition="left">
   <i class="fa-solid fa-angles-left"></i>
 </a>
 <app-menu></app-menu>

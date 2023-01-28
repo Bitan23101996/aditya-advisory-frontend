@@ -3,6 +3,7 @@ import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { InsurenceItem } from '../../models/insurence-item.model';
 import { ServiceItem } from '../../models/service-item.model';
 import { ApiService } from '../../services/api.service';
+import { BroadcastService } from '../../services/broadcast.service';
 
 @Component({
   selector: 'app-our-services',
@@ -12,8 +13,9 @@ import { ApiService } from '../../services/api.service';
 export class OurServicesComponent implements OnInit {
   serviceItemList: ServiceItem[] = [];
   insurenceItemList: InsurenceItem[] = [];
-
-  constructor(private apiService: ApiService) {}
+  displayEnuiryDialog:boolean = false;
+  selectedInsurenceItem:any = null;
+  constructor(private apiService: ApiService, private broadcastService: BroadcastService) {}
 
   ngOnInit(): void {
     // this.getServiceItemList();
@@ -74,6 +76,20 @@ export class OurServicesComponent implements OnInit {
 
   public getAllInsurenceList():InsurenceItem[]{
     this.insurenceItemList = this.apiService.getAlliInsurenceItemList();
-return this.insurenceItemList;
+    return this.insurenceItemList;
+  }
+
+  //Function: When Click on Enquiry Button 
+  public openEnuiryDialog(data:InsurenceItem){
+    this.selectedInsurenceItem = data.serviceItemId;
+    this.displayEnuiryDialog = true;
+    this.broadcastService.fixedMenuBtnVisibility.next(false);
+    
+  }
+
+  //Function: When Click on Close Button to close dailog
+  public closeEnuiryDialog(){
+    this.displayEnuiryDialog = false;
+    this.broadcastService.fixedMenuBtnVisibility.next(true);
   }
 }

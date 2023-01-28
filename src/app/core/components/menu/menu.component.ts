@@ -29,4 +29,9 @@ export class MenuComponent implements OnInit {
     this.displayMenu = !this.displayMenu;
     this.broadcastService.menuVisibility.next(this.displayMenu);
   }
+
+  public navigateToSection(){
+    this.displayMenu = !this.displayMenu;
+    this.broadcastService.menuVisibility.next(this.displayMenu);
+  }
 }

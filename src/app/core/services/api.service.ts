@@ -450,48 +450,56 @@ export class ApiService {
       menuName: 'Home',
       menuDesc: 'Home',
       showMenu: true,
+      redirectTo: 'home'
     },
     {
       menuId: 2,
-      menuName: 'About',
+      menuName: 'About Us',
       menuDesc: 'About',
       showMenu: true,
+      redirectTo: 'about-us-section'
     },
     {
       menuId: 3,
       menuName: 'Services',
       menuDesc: 'Services',
       showMenu: true,
+      redirectTo: 'services-section'
     },
     {
       menuId: 4,
       menuName: 'Trusted Brand',
       menuDesc: 'Trusted Brand',
       showMenu: true,
+      redirectTo: 'trusted-brand-section'
     },
     {
       menuId: 5,
       menuName: 'Payment',
       menuDesc: 'Payment',
       showMenu: true,
+      redirectTo: ''
     },
     {
       menuId: 6,
       menuName: 'Gallery',
       menuDesc: 'Gallery',
       showMenu: true,
+      redirectTo: ''
     },
     {
       menuId: 7,
       menuName: 'Feedback',
       menuDesc: 'Feedback',
       showMenu: true,
+      redirectTo: ''
     },
     {
       menuId: 8,
       menuName: 'Contact Us',
       menuDesc: 'Contact Us',
       showMenu: true,
+      redirectTo: 'enquiry-form-section'
     },
   ];
 

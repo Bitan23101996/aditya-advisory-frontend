@@ -8,7 +8,9 @@
         <ul class="menu-item" *ngIf="menuList.length > 0">
             <ng-container  *ngFor="let menu of menuList">
                 <li class="menu-item-list" *ngIf="menu.showMenu">
-                    <span class="menu-item-label" >{{menu.menuName}}</span>  
+                    <span class="menu-item-label">
+                        <a (click)="navigateToSection()" href="{{'#' + menu.redirectTo}}">{{menu.menuName}}</a>
+                    </span>  
                   </li>
             </ng-container>
             

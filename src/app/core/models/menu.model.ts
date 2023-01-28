@@ -2,5 +2,6 @@ export interface Menu{
     menuId: number,
     menuName:string,
     menuDesc: string,
-    showMenu: boolean
+    showMenu: boolean,
+    redirectTo: string
 }

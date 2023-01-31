@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SocialMediaIconModel } from '../../models/social-media-icon.model';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-application-footer',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ApplicationFooterComponent implements OnInit {
 
-  constructor() { }
+  socialMediaIconList:SocialMediaIconModel[] = [];
+  
+  constructor(private apiService: ApiService) { }
 
   ngOnInit(): void {
+    this.getSocialMediaIconList();
   }
-
+  // Get Social Media Icon List
+  getSocialMediaIconList(){
+    this.socialMediaIconList = this.apiService.getSocialMediaIconList();
+    return this.socialMediaIconList;
+  }
 }

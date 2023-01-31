@@ -1,6 +1,6 @@
 <div class="row" [formGroup]="enquiryForm">
     <!--Name-->
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+    <div class="col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 ">
         <label for="name" class="form-label">Name<span class="text-danger">*</span></label>
         <input type="text" formControlName="name" class="form-control" id="name" 
         [class]="submitted && enquiryForm.get('name')?.errors ? 'border-error' : ''"
@@ -16,7 +16,7 @@
         </div>
     </div>
     <!--Email-->
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 ">
         <label for="email" class="form-label">Email<span class="text-danger">*</span></label>
         <input type="email" formControlName="email" class="form-control"  
         [class]="submitted && enquiryForm.get('email')?.errors ? 'border-error' : ''"
@@ -36,7 +36,7 @@
 
     </div>
     <!--Mobile-->
-    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12 ">
+    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 ">
         <label for="mobile" class="form-label">Mobile<span class="text-error">*</span></label>
         <input type="text" formControlName="mobile" class="form-control"
         [class]="submitted && enquiryForm.get('mobile')?.errors ? 'border-error' : ''"

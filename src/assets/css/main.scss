@@ -1,3 +1,4 @@
+
 /*
 ----------------------------------------------------
 COMMON VARIABLE
@@ -47,9 +48,6 @@ html {
 COMMON SECTION DESIGN
 ---------------------------------------------------
 */
-
-
-
 
 .section-title h2 {
   font-family: "Crimson Text", serif;
@@ -127,7 +125,7 @@ MENU ITEM SECTION DESIGN
   letter-spacing: 1.5px;
   font-family: $section-label-font-family;
 }
-.menu-item-label a{
+.menu-item-label a {
   text-decoration: none;
   color: #000;
 }
@@ -145,13 +143,13 @@ MENU ITEM SECTION DESIGN
 
 .close-menu-icon {
   color: $primary-color;
-    font-size: 2.5rem;
-    position: absolute;
-    left: -2px;
-    z-index: 9999999;
-    top: -14px;
-    width: 50px;
-    height: 50px;
+  font-size: 2.5rem;
+  position: absolute;
+  left: -2px;
+  z-index: 9999999;
+  top: -14px;
+  width: 50px;
+  height: 50px;
 }
 
 /*
@@ -160,12 +158,11 @@ COMPANY LOGO SECTION DESIGN
 ---------------------------------------------------
 */
 
-.logo-container-item{
+.logo-container-item {
   display: flex;
   // justify-content: space-evenly;
   align-items: center;
 }
-
 
 #company-logo-section .logo-container {
   /*position: relative;
@@ -179,7 +176,7 @@ COMPANY LOGO SECTION DESIGN
   background-image: $app-primary-gradient;
 }
 .company-logo-image {
- /*  position: absolute;
+  /*  position: absolute;
   bottom: -95px; */
   height: 190px;
   // width: 540px;
@@ -205,17 +202,17 @@ COMPANY LOGO SECTION DESIGN
   margin-bottom: 15px;
 }
 
-.logo-section-label{
+.logo-section-label {
   color: #fff;
   font-size: 1rem;
   font-family: $section-label-font-family;
   text-decoration: none;
 }
-.logo-section-icon{
+.logo-section-icon {
   color: #fff;
   font-size: 1rem;
 }
-.logo-section-label:hover{
+.logo-section-label:hover {
   color: #fff;
   font-weight: 600;
   text-decoration: underline;
@@ -302,10 +299,10 @@ input[type="checkbox"].myClass:checked + label {
   -moz-box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
   box-shadow: 10px 10px 5px -7px rgba(0, 0, 0, 0.75);
 }
-.insurence-card.active{
+.insurence-card.active {
   border-top: 5px solid $primary-color !important;
 }
-.insurence-card.active .card-body{
+.insurence-card.active .card-body {
   background-color: $primaryy-active-color;
 }
 .insurence-card .custom-insurence-badge {
@@ -354,8 +351,8 @@ input[type="checkbox"].myClass:checked + label {
   background-color: red;
 } */
 
-.enquiry-dialog-modal.p-sidebar .p-sidebar-close, 
-.enquiry-dialog-modal.p-sidebar .p-sidebar-icon{
+.enquiry-dialog-modal.p-sidebar .p-sidebar-close,
+.enquiry-dialog-modal.p-sidebar .p-sidebar-icon {
   color: #fff !important;
   background: $primary-color !important;
 }
@@ -420,6 +417,11 @@ FOOTER SECTION DESIGN
   text-align: center;
 }
 
+.footer-social-icon {
+  margin: 7px;
+  font-size: 1.3rem;
+  cursor: pointer;
+}
 
 /*
 ----------------------------------------------------
@@ -427,35 +429,34 @@ ENQUIRY SECTION DESIGN
 ---------------------------------------------------
 */
 
-.enquiry-form-card{
+.enquiry-form-card {
   border-radius: 10px !important;
   border: 1px solid $secondary-color !important;
   padding: 10px;
-  -webkit-box-shadow: 4px 15px 17px -10px rgba(0,0,0,0.75);
-  -moz-box-shadow: 4px 15px 17px -10px rgba(0,0,0,0.75);
-  box-shadow: 4px 15px 17px -10px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 4px 15px 17px -10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 4px 15px 17px -10px rgba(0, 0, 0, 0.75);
+  box-shadow: 4px 15px 17px -10px rgba(0, 0, 0, 0.75);
 }
 
 .text-error {
   color: $primary-color !important;
 }
 
-.border-error{
+.border-error {
   border: 1px solid $primary-color !important;
 }
 
-.mandatory-text{
+.mandatory-text {
   font-size: 0.8rem;
   font-style: italic;
 }
-.info-box{
+.info-box {
   color: #0b2341;
   text-align: center;
   padding: 9px 0;
   background: #fff;
-  
 }
- .info-box i {
+.info-box i {
   font-size: 32px;
   color: #ed502e;
   border-radius: 15px;
@@ -468,17 +469,16 @@ ENQUIRY SECTION DESIGN
   font-weight: 700;
   font-family: $section-label-font-family;
 }
-.info-box p{
-  font-family: $secondary-font-family; 
+.info-box p {
+  font-family: $secondary-font-family;
 }
-.info-box p a:hover{
- font-weight: 600;
+.info-box p a:hover {
+  font-weight: 600;
 }
-.info-card-box{
-  border: 1px solid $secondary-color !important; 
+.info-card-box {
+  border: 1px solid $secondary-color !important;
   box-shadow: 4px 15px 17px -10px rgb(0 0 0 / 75%);
 }
-
 
 /*
 ----------------------------------------------------
@@ -486,11 +486,11 @@ FORM - BUTTON DESIGN
 ---------------------------------------------------
 */
 
-.form-label{
+.form-label {
   color: $secondary-color !important;
   font-weight: bold;
 }
-.form-control{
+.form-control {
   border-radius: 15px !important;
 }
 .form-control:focus {
@@ -498,17 +498,203 @@ FORM - BUTTON DESIGN
   box-shadow: none !important;
 }
 
-.primaryBtn{
+.primaryBtn {
   background-color: $primary-color !important;
   border: 1px solid $primary-color !important;
   border-radius: 20px !important;
   font-size: 1.1rem !important;
   letter-spacing: 1.5px !important;
-  -webkit-box-shadow: -1px 15px 7px -9px rgba(0,0,0,0.75) !important;
-  -moz-box-shadow: -1px 15px 7px -9px rgba(0,0,0,0.75) !important;
-  box-shadow: -1px 15px 7px -9px rgba(0,0,0,0.75) !important;
+  -webkit-box-shadow: -1px 15px 7px -9px rgba(0, 0, 0, 0.75) !important;
+  -moz-box-shadow: -1px 15px 7px -9px rgba(0, 0, 0, 0.75) !important;
+  box-shadow: -1px 15px 7px -9px rgba(0, 0, 0, 0.75) !important;
 }
-.primaryBtn:hover{
+.primaryBtn:hover {
   background-color: $secondary-color !important;
   border: 1px solid $secondary-color !important;
+}
+
+/*
+----------------------------------------------------
+MEDIA QUERIES
+---------------------------------------------------
+*/
+// Small devices (landscape phones, 320px and up)
+@media (min-width: 320px) {
+  .contact-details-text{
+    font-size: 0.5rem;
+  }
+  
+
+  //Social Media Icon Section
+  .social-media-icon-section span .social-icon {
+    padding: 3px 2px;
+    font-size: 1.3rem;
+  }
+  .open-menu-icon {
+    font-size: 1.2rem;
+    width: 35px;
+    height: 47px;
+  }
+  .imageItemTopSlider .ng-image-slider{
+    height: 324px !important;
+  }
+  .imageItemTopSlider .ng-image-slider .ng-image-slider-container .main{
+    height: 324px !important;
+  }
+  .company-title {
+    font-size: 1.5rem;
+  }
+  .small-screen-view{
+    display: block;
+  }
+  .large-screen-view{
+    display: none;
+  }
+  .section-title h2{
+    font-size: 2rem;
+  }
+  .section-description {
+    font-size: 1.1rem;
+  }
+  .insurence-card {
+    height: 440px !important;
+    min-height: 440px;
+  }
+  #enquiry-form-section .mt-sm-2{
+    margin-top: 1.5rem !important;
+  }
+  .info-box {
+    padding: 0px;
+  }
+  .info-box i {
+    font-size: 25px;
+    padding: 5px;
+  }
+  .primaryBtn{
+    font-size: 0.8rem !important;
+  }
+  #footer {
+    font-size: 0.8rem;
+  }
+  .company-logo-image{
+    margin-top: 5px;
+    height: 130px;
+  }
+  .footer-social-icon{
+    font-size: 1rem;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  //Social Media Icon Section
+  .social-media-icon-section span .social-icon {
+    padding: 5px 5px;
+    font-size: 1.5rem;
+  }
+  .open-menu-icon {
+    font-size: 1.5rem;
+    width: 50px;
+    height: 50px;
+  }
+  .imageItemTopSlider .ng-image-slider{
+    height: 400px !important;
+  }
+  .imageItemTopSlider .ng-image-slider .ng-image-slider-container .main{
+    height: 400px !important;
+  }
+  .company-title {
+    font-size: 2rem;
+  }
+  .small-screen-view{
+    display: none;
+  }
+  .large-screen-view{
+    display: block;
+  }
+  #company-logo-section .logo-container {
+    height: 200px;
+  }
+  .company-logo-image {
+    height: 150px;
+  }
+  .section-title h2{
+    font-size: 2rem;
+  }
+  .insurence-card {
+    height: 450px !important;
+    min-height: 450px;
+  }
+  #enquiry-form-section .mt-sm-2{
+    margin-top: 1.5rem !important;
+  }
+  .info-box {
+    padding: 0px;
+  }
+  .info-box i {
+    font-size: 25px;
+    padding: 5px;
+  }
+  .primaryBtn{
+    font-size: 1.1rem !important;
+  }
+  #footer {
+    font-size: 1.1rem;
+  }
+  .company-logo-image {
+    height: 150px;
+    margin-top: 20px;
+  }
+  .footer-social-icon{
+    font-size: 1.3rem;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .imageItemTopSlider .ng-image-slider{
+    height: 630px !important;
+  }
+  .imageItemTopSlider .ng-image-slider .ng-image-slider-container .main{
+    height: 630px !important;
+  }
+  .company-title {
+    font-size: 3rem;
+  }
+  .company-logo-image {
+    height: 190px;
+  }
+  #company-logo-section .logo-container {
+    height: 250px;
+  }
+  .section-title h2{
+    font-size: 2.5rem;
+  }
+  .section-description {
+    font-size: 1.4rem;
+  }
+  #enquiry-form-section .mt-sm-2{
+    margin-top: 0rem !important;
+  }
+  .info-box {
+    padding: 9px 0;
+  }
+  .info-box i {
+    font-size: 32px;
+    padding: 8px;
+  }
+  .company-logo-image {
+    height: 190px;
+    margin-top: 20px;
+  }
+}
+
+// X-Large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  
+}
+
+// XX-Large devices (larger desktops, 1400px and up)
+@media (min-width: 1400px) {
+  
 }

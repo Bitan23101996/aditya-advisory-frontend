@@ -8,5 +8,6 @@ export class BroadcastService {
 
   menuVisibility = new BehaviorSubject(false); //Menu Hide/Show
   fixedMenuBtnVisibility = new BehaviorSubject(true); //Fixed Menu Button Hide/Show
+  // enquiryMailSent = new BehaviorSubject(false);
   constructor() { }
 }

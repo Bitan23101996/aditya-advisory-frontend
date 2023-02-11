@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterContentChecked, Component, OnChanges, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup } from '@angular/forms';
 import { InsurenceItem } from '../../models/insurence-item.model';
 import { ServiceItem } from '../../models/service-item.model';
@@ -15,7 +15,12 @@ export class OurServicesComponent implements OnInit {
   insurenceItemList: InsurenceItem[] = [];
   displayEnuiryDialog:boolean = false;
   selectedInsurenceItem:any = null;
-  constructor(private apiService: ApiService, private broadcastService: BroadcastService) {}
+  // enquiryMailSent:boolean = false;
+  constructor(private apiService: ApiService, private broadcastService: BroadcastService) {
+   /*  this.broadcastService.enquiryMailSent.subscribe((res)=>{
+      this.enquiryMailSent = res;
+    }) */
+  }
 
   ngOnInit(): void {
     // this.getServiceItemList();
@@ -92,4 +97,10 @@ export class OurServicesComponent implements OnInit {
     this.displayEnuiryDialog = false;
     this.broadcastService.fixedMenuBtnVisibility.next(true);
   }
+  /* ngOnChanges(): void {
+    if(this.enquiryMailSent){
+      this.displayEnuiryDialog = false;
+      this.broadcastService.fixedMenuBtnVisibility.next(true);
+    }
+  } */
 }

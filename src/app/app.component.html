@@ -1,3 +1,4 @@
+<div ngxUiLoaderBlurred>
 <a *ngIf="displayFixedMenuBtn" href="javascript:void(0);" class="open-menu-icon" (click)="toggleMenu()" pTooltip="Open menu" tooltipPosition="left">
   <i class="fa-solid fa-angles-left"></i>
 </a>
@@ -8,12 +9,16 @@
 <div class="container">
   <app-about-us></app-about-us>
   <app-our-services></app-our-services>
-  <!-- <app-payment-gateway></app-payment-gateway> -->
 </div>
 <app-trusted-brand></app-trusted-brand>
 <div class="container">
-  <app-enquiry></app-enquiry>
+  <app-payment-gateway></app-payment-gateway>
+</div>
+<div class="container" style="position: relative">
+    <app-enquiry></app-enquiry>
 </div>
 <app-application-footer></app-application-footer>
-
+</div>
+<ngx-ui-loader></ngx-ui-loader>
+<ngx-ui-loader [loaderId]="'sent-enquiry-loader'"></ngx-ui-loader>
 <router-outlet></router-outlet>

@@ -1,5 +1,6 @@
 export interface QRCode{
     qrCodelabel: string,
     qrCodeImgUrl: string,
-    qrCodeId: number
+    qrCodeId: number,
+    qrCodeMobileNumber: number
 }

@@ -1,4 +1,4 @@
-<section id="payment-section" > 
+<!-- <section id="payment-section" > 
     <div class="section-title mt-4 mb-4">
       <h2 class="text-uppercase">Payment</h2>
     </div>
@@ -25,4 +25,36 @@
             </div>
         </div>
     </div>    
+  </section>
+ -->
+
+ <section id="payment-section" > 
+    <div class="section-title mt-4 mb-4">
+      <h2 class="text-uppercase">Payment</h2>
+    </div>
+    <div class="card">
+        <div class="card-header">
+            <div class="row text-center">
+              <strong>Payment through QR Codes </strong>
+            </div>
+        </div>
+        <div class="card-body">            
+            <div class="row" *ngIf="qrCodeList.length > 0">
+                <ng-container *ngFor="let qrCode of qrCodeList">
+                    <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">           
+                        <div class="card ">
+                          <div class="card-body posotion-relative">           
+                            <div class="card-header-section">
+                              <strong class=" text-center">{{qrCode?.qrCodelabel}} : {{qrCode.qrCodeMobileNumber}}</strong>              
+                            </div>           
+                            <img [src]="qrCode?.qrCodeImgUrl" alt="QR Code" class="qr-code-img"/>       
+                          </div>
+                        </div>
+                    </div>
+                </ng-container>
+            </div>
+        </div>
+    </div>  
+    
+    
   </section>

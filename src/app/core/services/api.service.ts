@@ -237,21 +237,25 @@ export class ApiService {
       qrCodeId: 1,
       qrCodelabel: 'PhonePay',
       qrCodeImgUrl: 'assets/images/qr-codes/qr.jpg',
+      qrCodeMobileNumber: 1987654230,
     },
     {
       qrCodeId: 2,
       qrCodelabel: 'Gpay',
       qrCodeImgUrl: 'assets/images/qr-codes/qr.jpg',
+      qrCodeMobileNumber: 236014785,
     },
     {
       qrCodeId: 3,
       qrCodelabel: 'Paytm',
       qrCodeImgUrl: 'assets/images/qr-codes/qr.jpg',
+      qrCodeMobileNumber: 357896401,
     },
     {
       qrCodeId: 4,
       qrCodelabel: 'Amazon Pay',
       qrCodeImgUrl: 'assets/images/qr-codes/qr.jpg',
+      qrCodeMobileNumber: 4107852369,
     },
   ];
 
@@ -450,56 +454,56 @@ export class ApiService {
       menuName: 'Home',
       menuDesc: 'Home',
       showMenu: true,
-      redirectTo: 'home'
+      redirectTo: 'home',
     },
     {
       menuId: 2,
       menuName: 'About Us',
       menuDesc: 'About',
       showMenu: true,
-      redirectTo: 'about-us-section'
+      redirectTo: 'about-us-section',
     },
     {
       menuId: 3,
       menuName: 'Services',
       menuDesc: 'Services',
       showMenu: true,
-      redirectTo: 'services-section'
+      redirectTo: 'services-section',
     },
     {
       menuId: 4,
       menuName: 'Trusted Brands',
       menuDesc: 'Trusted Brand',
       showMenu: true,
-      redirectTo: 'trusted-brand-section'
+      redirectTo: 'trusted-brand-section',
     },
     {
       menuId: 5,
       menuName: 'Payment',
       menuDesc: 'Payment',
-      showMenu: false,
-      redirectTo: ''
+      showMenu: true,
+      redirectTo: 'payment-section',
     },
     {
       menuId: 6,
       menuName: 'Gallery',
       menuDesc: 'Gallery',
       showMenu: false,
-      redirectTo: ''
+      redirectTo: '',
     },
     {
       menuId: 7,
       menuName: 'Feedback',
       menuDesc: 'Feedback',
       showMenu: false,
-      redirectTo: ''
+      redirectTo: '',
     },
     {
       menuId: 8,
       menuName: 'Contact Us',
       menuDesc: 'Contact Us',
       showMenu: true,
-      redirectTo: 'enquiry-form-section'
+      redirectTo: 'enquiry-form-section',
     },
   ];
 

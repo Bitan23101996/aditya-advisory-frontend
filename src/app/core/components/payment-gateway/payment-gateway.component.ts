@@ -15,7 +15,7 @@ export class PaymentGatewayComponent implements OnInit {
   constructor(private apiService: ApiService) {}
 
   ngOnInit(): void {
-    this.getPayableMobileNumberList();
+    // this.getPayableMobileNumberList();
     this.getQRCodeList();
   }
 
